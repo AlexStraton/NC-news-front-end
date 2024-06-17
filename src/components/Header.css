@@ -1,0 +1,10 @@
+.header {
+  background-color: rgb(67, 67, 247);
+  color: blanchedalmond;
+  display: flex;
+  flex-direction: row;
+}
+
+.grumpy {
+  margin-right: 90px;
+}
