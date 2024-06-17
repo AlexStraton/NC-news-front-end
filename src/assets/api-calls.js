@@ -6,6 +6,6 @@ const itemsAPI = axios.create({
 
 export function getAllArticles() {
   return itemsAPI.get("/articles").then(({ data }) => {
-    return data.categories;
+    return data.articles;
   });
 }
