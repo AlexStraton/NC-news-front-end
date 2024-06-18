@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./individualArticle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Comments from "./Comments";
 
 function IndividualArticle() {
   const { article_id } = useParams();
@@ -14,7 +15,6 @@ function IndividualArticle() {
   useEffect(() => {
     getSingleArticle(article_id)
       .then((article) => {
-        //console.log(article);
         setSingleArticle(article);
         isLoading(false);
       })
@@ -42,6 +42,7 @@ function IndividualArticle() {
         <FontAwesomeIcon icon={faThumbsUp} />
         {singleArticle.votes}
       </p>
+      <Comments />
     </section>
   );
 }
