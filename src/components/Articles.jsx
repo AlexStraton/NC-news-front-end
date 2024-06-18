@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { convertDate } from "../assets/utils";
 
 function ArticleList() {
   const [articleList, setArticleList] = useState([]);
@@ -33,7 +34,7 @@ function ArticleList() {
                 <ListGroup.Item>Topic: {article.topic}</ListGroup.Item>
                 <ListGroup.Item>Author: {article.author}</ListGroup.Item>
                 <ListGroup.Item>
-                  Date created: {article.created_at}
+                  {convertDate(article.created_at)}
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <FontAwesomeIcon icon={faComment} /> {article.comment_count}

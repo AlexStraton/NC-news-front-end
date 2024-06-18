@@ -11,9 +11,14 @@ export function getAllArticles() {
 }
 
 export function getSingleArticle(article_id) {
-  //console.log(article_id);
   return itemsAPI.get(`/articles/${article_id}`).then(({ data }) => {
-    console.log(data.article);
     return data.article;
+  });
+}
+
+export function getCommentsByArticleId(article_id) {
+  return itemsAPI.get(`/articles/${article_id}/comments`).then(({ data }) => {
+    console.log(data);
+    return data;
   });
 }
