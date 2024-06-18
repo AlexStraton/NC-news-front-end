@@ -3,6 +3,7 @@ import { getAllArticles } from "../assets/api-calls";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./Articles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function ArticleList() {
   const [articleList, setArticleList] = useState([]);
@@ -10,7 +11,6 @@ function ArticleList() {
   useEffect(() => {
     getAllArticles().then((articles) => {
       setArticleList(articles);
-      console.log(articleList);
     });
   }, []);
 
@@ -18,9 +18,9 @@ function ArticleList() {
     <section className='articles-section'>
       {articleList.map((article) => {
         return (
-          <Card key={article.article_id} style={{ width: "10rem" }}>
+          <Card key={article.article_id} style={{ width: "18rem" }}>
             <Card.Img
-              style={{ width: "10rem" }}
+              style={{ width: "18rem" }}
               variant='top'
               src={article.article_img_url}
             />

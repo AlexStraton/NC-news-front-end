@@ -4,8 +4,10 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 30px;
+  background-color: beige;
 }
 
 .each_article {
   padding: 30px;
+  border: solid black 2px;
 }
