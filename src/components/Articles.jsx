@@ -4,6 +4,9 @@ import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./Articles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 function ArticleList() {
   const [articleList, setArticleList] = useState([]);
@@ -33,10 +36,12 @@ function ArticleList() {
                   Date created: {article.created_at}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  Comment count: {article.comment_count}
+                  <FontAwesomeIcon icon={faComment} /> {article.comment_count}
                 </ListGroup.Item>
               </ListGroup>
-              <Card.Link href='#'>Read article</Card.Link>
+              <Link to={`/articles/${article.article_id}`}>
+                <p>Read article</p>
+              </Link>
             </Card.Body>
           </Card>
         );
