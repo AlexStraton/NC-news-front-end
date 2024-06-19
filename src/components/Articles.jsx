@@ -8,12 +8,14 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { convertDate } from "../assets/utils";
+import { ListGroupItem } from "react-bootstrap";
 
 function ArticleList() {
   const [articleList, setArticleList] = useState([]);
 
   useEffect(() => {
     getAllArticles().then((articles) => {
+      console.log(articles);
       setArticleList(articles);
     });
   }, []);
@@ -38,6 +40,9 @@ function ArticleList() {
                 </ListGroup.Item>
                 <ListGroup.Item>
                   <FontAwesomeIcon icon={faComment} /> {article.comment_count}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  <FontAwesomeIcon icon={faThumbsUp} /> {article.votes}
                 </ListGroup.Item>
               </ListGroup>
               <Link to={`/articles/${article.article_id}`}>

@@ -18,7 +18,17 @@ export function getSingleArticle(article_id) {
 
 export function getCommentsByArticleId(article_id) {
   return itemsAPI.get(`/articles/${article_id}/comments`).then(({ data }) => {
-    console.log(data);
     return data;
   });
+}
+
+export function updateArticleVotes(article_id, count) {
+  const votesBody = {
+    inc_votes: count,
+  };
+  return itemsAPI
+    .patch(`/articles/${article_id}`, votesBody)
+    .then(({ data }) => {
+      return data.article.votes;
+    });
 }
