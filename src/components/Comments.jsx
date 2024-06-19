@@ -26,7 +26,7 @@ function Comments() {
   return (
     <section>
       {comments.map((comment) => (
-        <Card>
+        <Card key={comment.comment_id}>
           <Card.Header>{comment.author}</Card.Header>
           <Card.Body>{comment.body}</Card.Body>
           <footer>

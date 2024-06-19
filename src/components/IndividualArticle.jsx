@@ -6,6 +6,7 @@ import "./individualArticle.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import Comments from "./Comments";
+import Votes from "./Votes";
 
 function IndividualArticle() {
   const { article_id } = useParams();
@@ -24,7 +25,7 @@ function IndividualArticle() {
   }, [article_id]);
 
   if (loading) {
-    return <div className='loading'>Loading...</div>;
+    return <p className='loading'>Loading...</p>;
   }
 
   return (
@@ -34,13 +35,12 @@ function IndividualArticle() {
       <h2>Written by: {singleArticle.author}</h2>
       <h2>Topic: {singleArticle.topic}</h2>
       <p className='text'>{singleArticle.body}</p>
+      <div>
+        <Votes initialVotes={singleArticle.votes} />
+      </div>
       <p>
         <FontAwesomeIcon icon={faComment} />
         {singleArticle.comment_count}
-      </p>
-      <p>
-        <FontAwesomeIcon icon={faThumbsUp} />
-        {singleArticle.votes}
       </p>
       <Comments />
     </section>
