@@ -32,3 +32,24 @@ export function updateArticleVotes(article_id, count) {
       return data.article.votes;
     });
 }
+
+export function postComment(article_id, newComment) {
+  const body = {
+    username: newComment.username,
+    body: newComment.body,
+  };
+  return itemsAPI
+    .post(`/articles/${article_id}/comments`, body)
+
+    .then(({ data }) => {
+      console.log(data); //full article
+      return data;
+    });
+}
+
+export function deleteComment(comment_id) {
+  return itemsAPI.delete(`/api/comments/${comment_id}`).then(({ data }) => {
+    console.log(data);
+    return data;
+  });
+}

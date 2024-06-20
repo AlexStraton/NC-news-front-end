@@ -1,0 +1,13 @@
+.commentInput {
+  color: black;
+  max-width: 100rem;
+  margin: 20px;
+}
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.add-comment-btn {
+  max-width: 100rem;
+}

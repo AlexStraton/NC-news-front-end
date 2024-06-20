@@ -1,7 +1,8 @@
 .individual_article {
+  width: 100%;
   border: solid black 2px;
   padding: 30px;
-  margin: 10px;
+
   background-color: rgb(17, 25, 82);
   color: aliceblue;
 }
@@ -17,4 +18,27 @@
   letter-spacing: 0.6px;
   column-width: 25rem;
   text-align: justify;
+}
+
+.comment-count-article {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+.comment-count-space {
+  margin-right: 5px;
+}
+
+.center {
+  display: block;
+
+  margin: auto;
+  width: 50%;
+}
+
+.topic-author {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

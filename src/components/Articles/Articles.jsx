@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAllArticles } from "../assets/api-calls";
+import { getAllArticles } from "../../assets/api-calls";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import "./Articles.css";
@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { convertDate } from "../assets/utils";
+import { convertDate } from "../../assets/utils";
 import { ListGroupItem } from "react-bootstrap";
 
 function ArticleList() {
