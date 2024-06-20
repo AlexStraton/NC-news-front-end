@@ -1,0 +1,16 @@
+.comments {
+  max-width: 100rem;
+  background-color: rgb(219, 231, 245);
+  margin: 20px;
+}
+
+.comments1 {
+  align-items: center;
+  /* position: relative; /* or absolute */
+  /* top: 100%;
+  left: 30%; */ */
+}
+
+.author {
+    background-color: rgb(152, 170, 245);
+}

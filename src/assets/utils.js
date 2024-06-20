@@ -1,5 +1,6 @@
 export function convertDate(string) {
+  // console.log(string);
   const date = new Date(string);
-  let convertedDate = date.toLocaleDateString("en-GB");
+  let convertedDate = date.toDateString();
   return convertedDate;
 }
