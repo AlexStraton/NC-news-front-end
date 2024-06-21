@@ -33,23 +33,14 @@ export function updateArticleVotes(article_id, count) {
     });
 }
 
-export function postComment(article_id, newComment) {
-  const body = {
-    username: newComment.username,
-    body: newComment.body,
-  };
+export function postComment(article_id, newCommentOBject) {
   return itemsAPI
-    .post(`/articles/${article_id}/comments`, body)
-
+    .post(`/articles/${article_id}/comments`, newCommentOBject)
     .then(({ data }) => {
-      console.log(data); //full article
       return data;
     });
 }
 
 export function deleteComment(comment_id) {
-  return itemsAPI.delete(`/api/comments/${comment_id}`).then(({ data }) => {
-    console.log(data);
-    return data;
-  });
+  return itemsAPI.delete(`/comments/${comment_id}`);
 }

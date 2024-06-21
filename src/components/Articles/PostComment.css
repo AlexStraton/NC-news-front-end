@@ -1,6 +1,6 @@
 .commentInput {
   color: black;
-  max-width: 100rem;
+  max-width: 100em;
   margin: 20px;
 }
 .comment-section {
@@ -9,5 +9,9 @@
   justify-content: space-between;
 }
 .add-comment-btn {
-  max-width: 100rem;
+  min-width: 30em;
+  margin: auto;
+}
+.toast_body {
+  color: black;
 }

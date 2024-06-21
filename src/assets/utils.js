@@ -4,3 +4,5 @@ export function convertDate(string) {
   let convertedDate = date.toDateString();
   return convertedDate;
 }
+
+// export function timer()
