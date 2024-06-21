@@ -6,7 +6,7 @@ import IndividualArticle from "./components/Articles/IndividualArticle";
 import { useState } from "react";
 
 function App() {
-  const [user, setUser] = useState("");
+  //const [user, setUser] = useState("");
 
   return (
     <>

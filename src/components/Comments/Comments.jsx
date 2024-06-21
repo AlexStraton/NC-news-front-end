@@ -8,10 +8,12 @@ import { convertDate } from "../../assets/utils";
 import PostComment from "../Articles/PostComment";
 import DeleteComment from "./DeleteComment";
 import "./Comments.css";
+import { UserContext } from "../Users/UserContext";
+import { useContext } from "react";
 
 function Comments() {
   const { article_id } = useParams();
-
+  const { user } = useContext(UserContext);
   const [comments, setComments] = useState([]);
   const [loading, isLoading] = useState(true);
 
@@ -24,7 +26,7 @@ function Comments() {
 
   const handleCommentDelete = (comment_id) => {
     setComments((prevComments) =>
-      prevComments.filter((comment) => comment.comment_id !== commentId)
+      prevComments.filter((comment) => comment.comment_id !== comment_id)
     );
   };
 
@@ -39,17 +41,20 @@ function Comments() {
         <Card className='comments' key={comment.comment_id}>
           <Card.Header className='author'>{comment.author}</Card.Header>
           <Card.Body>{comment.body}</Card.Body>
-          <footer>
+          <footer className='comment-Footer'>
             {convertDate(comment.created_at)}
             <p>
               {" "}
               <FontAwesomeIcon icon={faThumbsUp} />
               {comment.votes}
             </p>
-            <DeleteComment
-              commentId={comment.comment_id}
-              onDelete={handleCommentDelete}
-            />
+            {user === comment.author ? (
+              <DeleteComment
+                comment_id={comment.comment_id}
+                onDelete={handleCommentDelete}
+                comment_author={comment.author}
+              />
+            ) : null}
           </footer>
         </Card>
       ))}

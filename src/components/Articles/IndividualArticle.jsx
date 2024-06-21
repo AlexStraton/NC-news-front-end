@@ -40,7 +40,7 @@ function IndividualArticle() {
         <h2>Written by: {singleArticle.author}</h2>
         <h2>Topic: {singleArticle.topic}</h2>
       </div>
-      <p className='text'>{singleArticle.body}</p>
+      <p className='text first-paragraph'>{singleArticle.body}</p>
       <div>
         <Votes initialVotes={singleArticle.votes} />
       </div>

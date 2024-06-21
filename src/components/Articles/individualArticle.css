@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 .individual_article {
   width: 100%;
   border: solid black 2px;
   padding: 30px;
-
   background-color: rgb(17, 25, 82);
   color: aliceblue;
 }
@@ -10,7 +11,8 @@
 .heading {
   text-align: center;
   color: rgb(209, 89, 45);
-  font-size: 4rem;
+  font-size: 9rem;
+  font-family: "Bebas Neue", sans-serif;
 }
 .text {
   grid-column: 2 / 3;
@@ -18,6 +20,8 @@
   letter-spacing: 0.6px;
   column-width: 25rem;
   text-align: justify;
+  margin: 30px;
+  font-weight: 300;
 }
 
 .comment-count-article {
@@ -39,6 +43,20 @@
 
 .topic-author {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(165, 178, 248);
+}
+
+.first-paragraph::first-letter {
+  font-size: 6rem;
+  color: rgb(165, 178, 248);
+  float: up;
+  margin-right: 1rem;
 }
