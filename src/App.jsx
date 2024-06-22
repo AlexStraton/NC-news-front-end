@@ -3,19 +3,22 @@ import Header from "./components/Header";
 import ArticleList from "./components/Articles/Articles";
 import { Routes, Route } from "react-router-dom";
 import IndividualArticle from "./components/Articles/IndividualArticle";
-import { useState } from "react";
+import Topics from "./components/Articles/Topics";
+import NavBar from "./components/Nav_bar";
+import HomePage from "./components/HomePage";
 
 function App() {
-  //const [user, setUser] = useState("");
-
   return (
     <>
       <Header />
+      <NavBar />
       <Routes>
-        <Route path='/' element={<ArticleList />} />
+        <Route path='/' element={<HomePage />}></Route>
+        <Route path='/articles' element={<ArticleList />} />
         <Route
           path='/articles/:article_id'
           element={<IndividualArticle />}></Route>
+        <Route path='/articles/topic/:topic' element={<Topics />} />
       </Routes>
     </>
   );

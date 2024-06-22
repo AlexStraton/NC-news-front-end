@@ -12,6 +12,7 @@ export function getAllArticles() {
 
 export function getSingleArticle(article_id) {
   return itemsAPI.get(`/articles/${article_id}`).then(({ data }) => {
+    //console.log(data);
     return data.article;
   });
 }
@@ -43,4 +44,11 @@ export function postComment(article_id, newCommentOBject) {
 
 export function deleteComment(comment_id) {
   return itemsAPI.delete(`/comments/${comment_id}`);
+}
+
+export function getTopics(topic) {
+  console.log(topic);
+  return itemsAPI.get(`/articles?topic=${topic}`).then(({ data }) => {
+    return data;
+  });
 }

@@ -1,10 +1,18 @@
 .header {
-  background-color: rgb(67, 67, 247);
+  background-color: rgb(5, 5, 154);
   color: blanchedalmond;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .grumpy {
-  margin-right: 90px;
+  margin: 20px;
+}
+h1 {
+  margin: 10px;
+  padding: 20px;
+}
+.welcome {
+  text-align: center;
 }

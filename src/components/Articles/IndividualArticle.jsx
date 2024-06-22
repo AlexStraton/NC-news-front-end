@@ -20,7 +20,7 @@ function IndividualArticle() {
         isLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   }, [article_id]);
 
