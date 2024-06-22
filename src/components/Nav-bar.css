@@ -1,0 +1,9 @@
+.nav-bar {
+  background-color: rgb(140, 174, 248);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.nav_bar_item {
+  color: black;
+}
