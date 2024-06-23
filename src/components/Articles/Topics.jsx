@@ -12,9 +12,7 @@ function Topics() {
   useEffect(() => {
     getTopics(topic)
       .then((data) => {
-        console.log(data.articles);
         setArticles(data.articles);
-        console.log(articles);
         setLoading(false);
       })
       .catch((err) => {
@@ -27,7 +25,7 @@ function Topics() {
 
   return (
     <>
-      <h1>You are viewing {topic} articles </h1>
+      <h1>You are viewing all the {topic} articles </h1>
       <section className='articles-section'>
         {articles.map((article) => {
           return <ArticleCard key={article.article_id} article={article} />;

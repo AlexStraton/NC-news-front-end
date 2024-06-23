@@ -7,7 +7,7 @@ function Header() {
     <header className='header'>
       <div>
         <h1>North Coders</h1>
-        <h1 className='welcome'>Welcome to NC NEWS</h1>
+        <h1 className='welcome'> NC NEWS</h1>
       </div>
       <h2 className='grumpy'>
         <FontAwesomeIcon icon={faUser} />

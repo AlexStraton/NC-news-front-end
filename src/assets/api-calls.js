@@ -6,13 +6,14 @@ const itemsAPI = axios.create({
 
 export function getAllArticles() {
   return itemsAPI.get("/articles").then(({ data }) => {
+    console.log(data.articles);
     return data.articles;
   });
 }
 
 export function getSingleArticle(article_id) {
   return itemsAPI.get(`/articles/${article_id}`).then(({ data }) => {
-    //console.log(data);
+    console.log(data);
     return data.article;
   });
 }
@@ -47,8 +48,15 @@ export function deleteComment(comment_id) {
 }
 
 export function getTopics(topic) {
-  console.log(topic);
   return itemsAPI.get(`/articles?topic=${topic}`).then(({ data }) => {
+    return data;
+  });
+}
+
+export function getArticlesByQuery(sort_by_query) {
+  return itemsAPI.get(`/articles?sort_by=${sort_by_query}`).then(({ data }) => {
+    console.log(data);
+
     return data;
   });
 }

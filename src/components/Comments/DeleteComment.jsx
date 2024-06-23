@@ -1,6 +1,6 @@
 import { deleteComment } from "../../assets/api-calls";
 import Button from "react-bootstrap/Button";
-import { UserContext } from "../Users/UserContext";
+import { UserContext } from "../Context/UserContext";
 import { useContext } from "react";
 import { useState } from "react";
 import Col from "react-bootstrap/Col";

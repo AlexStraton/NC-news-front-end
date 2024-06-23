@@ -8,7 +8,7 @@ import { convertDate } from "../../assets/utils";
 import PostComment from "../Articles/PostComment";
 import DeleteComment from "./DeleteComment";
 import "./Comments.css";
-import { UserContext } from "../Users/UserContext";
+import { UserContext } from "../Context/UserContext";
 import { useContext } from "react";
 
 function Comments() {
