@@ -1,14 +1,9 @@
-.articles-section {
+/* .articles-section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background-color: beige;
+  background-color: rgb(29, 3, 144);
   width: 100vw;
-  height: 100vh;
-}
-
-.each-article {
-  border: solid black 2px;
-  margin-bottom: 30px;
-}
+  height: fit-content;
+} */

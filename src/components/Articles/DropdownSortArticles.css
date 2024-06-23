@@ -1,0 +1,7 @@
+.dropdown {
+  max-width: fit-content;
+  height: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+}

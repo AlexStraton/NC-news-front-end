@@ -4,6 +4,7 @@ import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { convertDate } from "../assets/utils";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import "./ArticleCard.css";
 
 export default function ArticleCard({ article }) {
   return (
