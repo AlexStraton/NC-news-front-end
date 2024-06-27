@@ -11,13 +11,13 @@ export default function NavBar() {
         All articles
       </Link>
       <Link className='nav_bar_item' to={`/articles/topic/coding`}>
-        Coding articles
+        Coding
       </Link>
       <Link className='nav_bar_item' to={`/articles/topic/cooking`}>
-        Cooking articles
+        Cooking
       </Link>
       <Link className='nav_bar_item' to={`/articles/topic/football`}>
-        Football articles
+        Football
       </Link>
     </nav>
   );

@@ -4,14 +4,17 @@ import { faComment, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { convertDate } from "../assets/utils";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
-import "./ArticleCard.css";
 
-export default function ArticleCard({ article }) {
+export default function ArticleCard({ article, className }) {
   return (
     <Card
-      className='each-article'
+      className={`article-card ${className}`}
       key={article.article_id}
-      style={{ width: "18rem" }}>
+      style={{
+        width: "18rem",
+        margin: "20px",
+        backgroundColor: "rgb(205, 240, 255",
+      }}>
       <Card.Img
         style={{ width: "18rem" }}
         variant='top'
@@ -23,12 +26,25 @@ export default function ArticleCard({ article }) {
           <ListGroup.Item>Topic: {article.topic}</ListGroup.Item>
           <ListGroup.Item>Author: {article.author}</ListGroup.Item>
           <ListGroup.Item>{convertDate(article.created_at)}</ListGroup.Item>
-          <ListGroup.Item>
-            <FontAwesomeIcon icon={faComment} /> {article.comment_count}
+          <ListGroup.Item
+            style={{
+              display: "flex",
+              justifyContent: "right",
+
+              fontWeight: "bold",
+            }}>
+            <FontAwesomeIcon style={{ marginRight: "5px" }} icon={faComment} />
+            <span
+              style={{
+                marginRight: "15px",
+                fontWeight: "bold",
+              }}>
+              {article.comment_count}
+            </span>
+            <FontAwesomeIcon style={{ marginRight: "5px" }} icon={faThumbsUp} />
+            {article.votes}
           </ListGroup.Item>
-          <ListGroup.Item>
-            <FontAwesomeIcon icon={faThumbsUp} /> {article.votes}
-          </ListGroup.Item>
+
           {/* this is where I can implement likes for each article*/}
         </ListGroup>
         <Link to={`/articles/${article.article_id}`}>

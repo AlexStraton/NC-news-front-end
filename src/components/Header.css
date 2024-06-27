@@ -1,5 +1,5 @@
-.header {
-  background-color: rgb(5, 5, 154);
+.header-container {
+  background-color: rgb(11, 11, 52);
   color: blanchedalmond;
   display: flex;
   flex-direction: row;
@@ -13,6 +13,13 @@ h1 {
   margin: 10px;
   padding: 20px;
 }
+
 .welcome {
-  text-align: center;
+  background-color: rgb(11, 11, 52);
+  font-size: 5rem;
+}
+
+.North-Coders {
+  background-color: rgb(11, 11, 52);
+  font-size: 5rem;
 }

@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { getArticlesByQuery } from "../../assets/api-calls";
 
 function DropdownSort({ articleList, setArticleList }) {
-  const [sortBy, setSortBy] = useState(""); //storing whatever select we re choosing
+  const [sortBy, setSortBy] = useState("");
 
   function handleChange(event) {
     setSortBy(event.target.value); //setting the state of dropdown list
@@ -19,11 +19,19 @@ function DropdownSort({ articleList, setArticleList }) {
 
   return (
     <label className='dropdown'>
-      <select value={sortBy} onChange={handleChange}>
+      {" "}
+      Sort by
+      <select
+        className='dowpdown-select-box'
+        value={sortBy}
+        onChange={handleChange}>
         <option value=''>Select</option>
         <option value='comment_count'>Comment count</option>
         <option value='created_at'>Date</option>
         <option value='votes'>Votes</option>
+        <option value='topic'>Topic</option>
+        <option value='author'>Author</option>
+        <option value='title'>Title</option>
       </select>
     </label>
   );

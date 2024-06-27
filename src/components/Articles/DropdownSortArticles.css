@@ -1,7 +1,21 @@
 .dropdown {
-  max-width: fit-content;
-  height: fit-content;
   display: block;
-  margin: 0 auto;
-  margin-top: 50px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  background-color: rgb(16, 94, 182);
+}
+.dowpdown-select-box {
+  border: solid black 1px;
+  width: 50em;
+  height: 2em;
+  background-color: rgb(217, 242, 251);
+  border-radius: 11px;
+  font-size: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
 }

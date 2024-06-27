@@ -26,7 +26,12 @@ function Topics() {
   return (
     <>
       <h1>You are viewing all the {topic} articles </h1>
-      <section className='articles-section'>
+      <section
+        className='articles-section'
+        style={{
+          backgroundColor: "rgb(11, 11, 52)",
+          height: "fit-content",
+        }}>
         {articles.map((article) => {
           return <ArticleCard key={article.article_id} article={article} />;
         })}

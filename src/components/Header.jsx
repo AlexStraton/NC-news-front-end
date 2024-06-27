@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   return (
-    <header className='header'>
+    <header className='header-container'>
       <div>
-        <h1>North Coders</h1>
         <h1 className='welcome'> NC NEWS</h1>
       </div>
       <h2 className='grumpy'>
